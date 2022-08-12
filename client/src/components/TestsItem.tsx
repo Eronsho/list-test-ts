@@ -33,9 +33,9 @@ const TestsItems: React.FC<TestsItemProps> = memo(({ human }) => {
         <div className="item-tests__content">
           {human.language.toLocaleLowerCase() === "ru"
             ? "Русский"
-            : human.language.toLocaleLowerCase() === "eu" || "en"
+            :( human.language.toLocaleLowerCase() === "eu" || "en"
             ? "Английский"
-            : human.language}
+            : human.language)}
         </div>
         <div
           className="item-tests__content"
