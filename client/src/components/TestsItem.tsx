@@ -26,7 +26,13 @@ const TestsItems: React.FC<TestsItemProps> = memo(({ human }) => {
         <div className="item-tests__content">{human.lastName}</div>
         <div className="item-tests__content">{human.country}</div>
         <div className="item-tests__content">{human.age}</div>
-        <div className="item-tests__content">{human.language}</div>
+        <div className="item-tests__content">
+          {human.language.toLocaleLowerCase() === "ru"
+            ? "Русский"
+            : human.language.toLocaleLowerCase() === "eu" || "en"
+            ? "Английский"
+            : human.language}
+        </div>
         <div
           className="item-tests__content"
           onClick={() => {
