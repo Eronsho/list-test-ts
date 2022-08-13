@@ -22,7 +22,7 @@ const TestsItems: React.FC<TestsItemProps> = memo(({ human }) => {
           className="item-tests__color"
         ></div>
         <div className="item-tests__content">{human.id}</div>
-        <div className="item-tests__content">{human.lastName}</div>
+        <div className="item-tests__content">{human.firstName}</div>
         <div className="item-tests__content">{human.lastName}</div>
         <div className="item-tests__content">
           {human.country.toLocaleLowerCase() === "russian"
